@@ -2,7 +2,7 @@ const express=require('express')
 const mongoose=require('mongoose')
 const userRouter=require('./Route/userRoute')
 const app=express();
-const PORT=8000;
+const PORT=7000;
 
 
 
@@ -13,8 +13,9 @@ mongoose.connect('mongodb://localhost:27017/kec_db')
     console.log("Error Connecting to Database"+err.message)
 });
 
-app.use(userRouter)
+
 app.use(express.json())
+app.use(userRouter)
 
 
 app.listen(PORT,()=>{
