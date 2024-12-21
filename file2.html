@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="form-details"></div>
+
+
+    <script>
+        const url=new URLSearchParams(window.location.search);
+        const fname=url.get('fname');
+        const lname=url.get('lname');
+
+        const form_details=document.getElementById('form-details');
+        form_details.innerHTML=`<h1>Firstname is ${fname}</h1><h1>lastname is ${lname}</h1>`;
+
+
+    </script>
+</body>
+</html>
